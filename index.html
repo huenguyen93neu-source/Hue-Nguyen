@@ -2,10 +2,11 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nguyễn Huế & Xuân Lộc — 20.12.2026</title>
+<title>Thiệp mời Huế Nguyễn và Xuân Lộc</title>
 <meta name="description" content="Trân trọng kính mời bạn đến chung vui cùng Nguyễn Huế và Xuân Lộc, lúc 11h00 ngày 20/12/2026 tại Khách sạn Đại Huệ Palace, Nghệ An.">
 <meta name="theme-color" content="#f7f5ed">
-<meta property="og:title" content="Nguyễn Huế & Xuân Lộc — Trân trọng kính mời">
+<meta property="og:title" content="Thiệp mời Huế Nguyễn và Xuân Lộc">
+<meta name="twitter:title" content="Thiệp mời Huế Nguyễn và Xuân Lộc">
 <meta property="og:description" content="11h00 • Chủ nhật, 20.12.2026 • Khách sạn Đại Huệ Palace, Nghệ An">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -486,7 +487,7 @@ function showPhoto(index){currentPhoto=(index+photos.length)%photos.length;large
 document.querySelectorAll('.gallery-image').forEach((button,index)=>{button.setAttribute('aria-label','Xem ảnh: '+photos[index].alt);button.addEventListener('click',()=>{opener=button;showPhoto(index);lightbox.showModal();document.body.style.overflow='hidden'})});
 document.getElementById('prev-photo').addEventListener('click',()=>showPhoto(currentPhoto-1));document.getElementById('next-photo').addEventListener('click',()=>showPhoto(currentPhoto+1));document.getElementById('close-lightbox').addEventListener('click',()=>lightbox.close());lightbox.addEventListener('close',()=>{document.body.style.overflow='';opener?.focus()});lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close()});lightbox.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')showPhoto(currentPhoto-1);if(e.key==='ArrowRight')showPhoto(currentPhoto+1)});
 let toastTimeout;function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('visible');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('visible'),3500)}
-document.getElementById('share').addEventListener('click',async()=>{const data={title:'Nguyễn Huế & Xuân Lộc — 20.12.2026',text:'Trân trọng kính mời bạn đến chung vui cùng chúng mình lúc 11h00 ngày 20/12/2026 tại Khách sạn Đại Huệ Palace.',url:location.href.split('#')[0]};try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(data.url);toast('Đã sao chép đường dẫn thiệp')}}catch(error){if(error.name!=='AbortError')toast('Bạn có thể sao chép đường dẫn trên thanh địa chỉ')}});
+ document.getElementById('share').addEventListener('click',async()=>{const data={title:'Thiệp mời Huế Nguyễn và Xuân Lộc',text:'Trân trọng kính mời bạn đến chung vui cùng chúng mình lúc 11h00 ngày 20/12/2026 tại Khách sạn Đại Huệ Palace.',url:location.href.split('#')[0]};try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(data.url);toast('Đã sao chép đường dẫn thiệp')}}catch(error){if(error.name!=='AbortError')toast('Bạn có thể sao chép đường dẫn trên thanh địa chỉ')}});
 
 const opening=document.getElementById('opening');
 const invitationContent=[...document.querySelectorAll('header,main,footer')];
